@@ -1,0 +1,158 @@
+html {
+  font-size: 200%;
+  font-family: Open Sans; }
+  html #container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center; }
+    html #container #buttons {
+      margin: 1rem;
+      display: flex;
+      flex-flow: row nowrap;
+      min-width: 100%;
+      justify-content: center; }
+      html #container #buttons button {
+        outline: none;
+        position: relative;
+        box-sizing: border-box;
+        min-width: 10rem;
+        overflow: hidden;
+        height: 4rem;
+        margin: .3rem;
+        font-size: 1rem;
+        border: 0.2rem solid #333;
+        border-radius: 2%;
+        color: #333;
+        transition: all .4s ease; }
+        html #container #buttons button span {
+          display: none;
+          position: absolute; }
+        html #container #buttons button p {
+          padding: 0;
+          margin: 0; }
+        html #container #buttons button#addButton {
+          background-color: #4cf249; }
+          html #container #buttons button#addButton:hover {
+            background-color: lime; }
+        html #container #buttons button#removeButton {
+          background-color: #ff3131; }
+          html #container #buttons button#removeButton:hover {
+            background-color: red; }
+        html #container #buttons button:hover {
+          border: .2rem solid black;
+          color: black;
+          cursor: pointer; }
+          html #container #buttons button:hover span {
+            display: block;
+            color: #222;
+            margin-top: .05rem;
+            font-size: .44rem;
+            margin: 0 auto;
+            width: 100%; }
+        @media (max-width: 800px) {
+          html #container #buttons button {
+            min-width: 50%; } }
+    html #container #employeesTable {
+      border: solid;
+      min-width: 50%;
+      text-align: center;
+      border-radius: 4%;
+      padding: .2rem; }
+      html #container #employeesTable thead {
+        cursor: pointer; }
+      html #container #employeesTable tbody tr {
+        border-bottom: .1rem solid #ccc;
+        transition: all .4s ease; }
+        html #container #employeesTable tbody tr.active {
+          background-color: #ccc; }
+          html #container #employeesTable tbody tr.active td {
+            border: .01rem solid red; }
+          html #container #employeesTable tbody tr.active:hover {
+            background-color: #bbb; }
+        html #container #employeesTable tbody tr:hover {
+          background-color: #eee; }
+        html #container #employeesTable tbody tr td {
+          cursor: pointer;
+          text-transform: capitalize;
+          border: .01rem solid black; }
+      @media (max-width: 800px) {
+        html #container #employeesTable {
+          min-width: 100%; } }
+    html #container #newEmployeeForm {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      border: solid;
+      padding: 0;
+      box-sizing: border-box;
+      width: 100%;
+      justify-content: space-around; }
+      html #container #newEmployeeForm input {
+        box-sizing: border-box;
+        height: 3rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 2%;
+        min-width: 20rem;
+        border: .1rem solid black;
+        margin: .2rem;
+        outline: none;
+        text-align: center; }
+        html #container #newEmployeeForm input.invalid {
+          background-color: #e04e34; }
+        html #container #newEmployeeForm input:focus {
+          background-color: #fff6a8; }
+      html #container #newEmployeeForm button {
+        position: relative;
+        padding: 1rem;
+        box-sizing: border-box;
+        text-align: center;
+        outline: none;
+        overflow: hidden;
+        margin: .5rem;
+        height: 3rem;
+        width: 3rem;
+        font-size: 2rem;
+        padding: 0;
+        border: .1rem solid black;
+        transition: all .4s ease; }
+        html #container #newEmployeeForm button#backButton {
+          background-color: #fae741; }
+        html #container #newEmployeeForm button#plusButton {
+          background-color: #4cf249; }
+        html #container #newEmployeeForm button span {
+          display: none;
+          padding: 0;
+          margin: 0; }
+        html #container #newEmployeeForm button p {
+          padding: 0;
+          margin: 0; }
+        html #container #newEmployeeForm button:hover {
+          cursor: pointer;
+          font-size: 1.3rem; }
+          html #container #newEmployeeForm button:hover span {
+            display: block;
+            font-size: .7rem; }
+      @media (max-width: 1600px) {
+        html #container #newEmployeeForm {
+          flex-flow: column wrap; }
+          html #container #newEmployeeForm a {
+            min-width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; }
+          html #container #newEmployeeForm button {
+            min-width: 95%; }
+          html #container #newEmployeeForm form {
+            display: flex;
+            width: 100%;
+            flex-flow: column wrap;
+            align-items: center; }
+            html #container #newEmployeeForm form input {
+              min-width: 95%;
+              padding: 0;
+              min-width: none;
+              font-size: 1rem; } }
+
+/*# sourceMappingURL=App.css.map */

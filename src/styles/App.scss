@@ -1,0 +1,202 @@
+html{
+  font-size:200%;
+  font-family: Open Sans;
+    #container{
+      display:flex;
+      flex-flow:column nowrap;
+      align-items:center;
+      #buttons{
+        margin:1rem;
+        display:flex;
+        flex-flow:row nowrap;
+        min-width:100%;
+        justify-content: center;
+        button{
+          $textColor:#333;
+          outline:none;
+          position:relative;
+          box-sizing:border-box;
+          min-width:10rem;
+          overflow: hidden;
+          height:4rem;
+          margin:.3rem;
+          font-size:1rem;
+          border:.2rem solid $textColor;
+          border-radius:2%;
+          color:$textColor;
+          transition:all .4s ease;
+
+          span{
+            display:none;
+            position:absolute;
+
+          }
+          p{
+            padding:0;
+            margin:0;
+          }
+          &#addButton{
+            background-color:#4cf249;
+            &:hover{
+              background-color: lime;
+            }
+          }
+          &#removeButton{
+            background-color:#ff3131;
+            &:hover{
+              background-color:red;
+            }
+          }
+          &:hover{
+            border:.2rem solid black;
+            color:black;
+            cursor:pointer;
+            span{
+              display:block;
+              color:#222;
+              margin-top:.05rem;
+              font-size:.44rem;
+              margin:0 auto;
+              width:100%;
+            }
+          }
+          @media(max-width:800px){
+            min-width:50%;
+
+          }
+        }
+      }
+      #employeesTable{
+        border:solid;
+        min-width:50%;
+        text-align: center;
+        border-radius:4%;
+        padding:.2rem;
+
+        thead{
+          cursor:pointer;
+        }
+        tbody{
+            tr{
+              border-bottom:.1rem solid #ccc;
+              transition:all .4s ease;
+              &.active{
+                background-color: #ccc;
+                td{
+                  border:.01rem solid red;
+                }
+                &:hover{
+                  background-color:#bbb;
+                }
+              }
+              &:hover{
+                background-color:#eee;
+              }
+              td{
+                cursor:pointer;
+                text-transform:capitalize;
+                border:.01rem solid black;
+              }
+            }
+          }
+          @media (max-width:800px){
+            min-width:100%;
+          }
+
+      }
+      #newEmployeeForm{
+        display:flex;
+        flex-flow:row wrap;
+
+        align-items: center;
+        border:solid;
+        padding:0;
+        box-sizing: border-box;
+        width:100%;
+        justify-content: space-around;
+        input{
+          box-sizing:border-box;
+          height:3rem;
+          font-size:1.2rem;
+          font-weight:bold;
+          border-radius:2%;
+          min-width:20rem;
+          border:.1rem solid black;
+          margin:.2rem;
+          outline:none;
+          text-align:center;
+          &.invalid{
+            background-color:rgb(224, 78, 52);
+          }
+          &:focus{
+            background-color:rgb(255, 246, 168);
+          }
+        }
+              button{
+                position:relative;
+                padding:1rem;
+                box-sizing: border-box;
+                text-align:center;
+                outline:none;
+                overflow: hidden;
+                margin:.5rem;
+                height:3rem;
+                width:3rem;
+                font-size:2rem;
+                padding:0;
+                border:.1rem solid black;
+                transition:all .4s ease;
+                &#backButton{
+                  background-color:rgb(250, 231, 65);
+                }
+                &#plusButton{
+                  background-color:#4cf249;;
+                }
+                span{
+                  display:none;
+                  padding:0;
+                  margin:0;
+                }
+                p{
+                  padding:0;
+                  margin:0;
+                }
+                &:hover{
+                  cursor:pointer;
+                  font-size:1.3rem;
+
+                  span{
+                    display:block;
+                    font-size:.7rem;
+                  }
+                }
+              }
+              @media (max-width:1600px){
+                flex-flow:column wrap;
+                a{
+                    min-width:100%;
+                    margin:0;
+                    padding:0;
+                    display:flex;
+                    justify-content: center;
+                }
+                button{
+                  min-width:95%;
+                }
+                form{
+                  display:flex;
+                  width:100%;
+                  flex-flow:column wrap;
+                  align-items:center;
+                  input{
+                    min-width:95%;
+                    padding:0;
+                    min-width:none;
+                    font-size:1rem;
+                  }
+                }
+              }
+      }
+
+    }
+}
